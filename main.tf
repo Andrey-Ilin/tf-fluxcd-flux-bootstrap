@@ -12,6 +12,12 @@ provider "flux" {
   }
 }
 
+resource "null_resource" "dependency_setter" {
+  triggers = {
+    dependency_id = var.depends_on_hack == null ? "" : var.depends_on_hack
+  }
+}
+
 resource "flux_bootstrap_git" "this" {
   path = var.target_path
 }

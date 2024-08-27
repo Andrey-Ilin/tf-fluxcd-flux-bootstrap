@@ -24,3 +24,8 @@ variable "config_path" {
   default     = "~/.kube/config"
   description = "The path to the kubeconfig file"
 }
+
+variable "depends_on_hack" {
+  type        = any
+  default     = null
+}

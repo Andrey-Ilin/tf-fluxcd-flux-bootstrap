@@ -14,4 +14,5 @@ provider "flux" {
 
 resource "flux_bootstrap_git" "this" {
   path = var.target_path
+  depends_on = [kind_cluster.this]
 }

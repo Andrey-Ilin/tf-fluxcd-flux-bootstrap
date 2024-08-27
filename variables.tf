@@ -11,7 +11,6 @@ variable "target_path" {
 
 variable "github_token" {
   type        = string
-  default     = ""
   description = "The token used to authenticate with the Git repository"
 }
 

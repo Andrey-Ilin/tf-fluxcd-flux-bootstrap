@@ -20,7 +20,7 @@ resource "null_resource" "dependency_setter" {
 
 resource "flux_bootstrap_git" "this" {
   path = var.target_path
-  timeouts {
+  timeouts = {
     create = "30m"
     update = "30m"
     delete = "30m"
